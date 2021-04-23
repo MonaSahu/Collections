@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] a1 = new string[]
+		{"apple","banana","chiku","apple"};
+		string[] a2 = new string[]
+		{"apple","papaya","kiwi","chiku"};
+		List<string> list = new List<string>();
+		foreach(string str in a1)
+		{
+			if(!(list.Contains(str)))
+			list.Add(str);
+		}
+		foreach(string str1 in a2)
+		{
+			if(!(list.Contains(str1)))
+			{
+				list.Add(str1);
+			}
+		}
+		foreach(string str2 in list)
+		{
+			Console.Write(str2 + " ");
+		}
+		
+	}
+}
