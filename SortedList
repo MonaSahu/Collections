@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+					
+public class Program
+{
+	public static void Main()
+	{
+		SortedList list = new SortedList();
+		//adding item to the Sortedlist
+		list.Add("1","Chocolates");
+		list.Add("2","Coffee");
+		list.Add("3","Latte");
+		list.Add("4","Cappuccino");
+		list.Add("5","Black Coffee");
+		//check if the SotedList object has a fixed size
+		
+		Console.WriteLine(list.IsFixedSize);
+		
+		//check if the SortedList object is read-only or not
+		
+		Console.WriteLine(list.IsReadOnly);
+		
+		foreach(DictionaryEntry dp in list)
+		{
+			Console.WriteLine(dp.Key + " " + dp.Value);
+		}
+	
+	}
+}
