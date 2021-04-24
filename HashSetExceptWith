@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+public class SortedListProgram
+{
+	public static void Main(string[] args)
+	{
+		HashSet<int> set1 = new HashSet<int>();
+		for(int i = 0 ; i < 7; i++)
+		{
+			set1.Add(i);
+		}
+		HashSet<int> set2 = new HashSet<int>();
+		for(int i = 4 ; i < 11 ; i++)
+		{
+			set2.Add(i);
+		}
+		// Removing all elements in a collection from a HashSet
+		set2.ExceptWith(set1);
+		
+		
+		// Printing the elements in mySet2
+        // It only prints the elements which are
+        // in mySet2 and not in mySet1
+		foreach(int i in set2)
+		{
+			Console.WriteLine(i);
+		}
+	}
+}
