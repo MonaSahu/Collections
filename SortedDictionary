@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+
+public class SortedListProgram
+{
+	public static void Main(string[] args)
+	{
+		SortedDictionary<int,string> dict = new SortedDictionary<int,string>();
+		
+		dict.Add(3,"Yahoo");
+		dict.Add(4,"Ask.com");
+		dict.Add(2,"Bing");
+		dict.Add(5,"AOL.com");
+		dict.Add(1,"Google");
+		Console.WriteLine("Top search engines");
+		
+		foreach(KeyValuePair<int,string> kp in dict) 
+		{
+			Console.WriteLine("Rank : {0}, Name {1}", kp.Key, kp.Value);
+		}
+	}
+}
