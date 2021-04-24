@@ -1,0 +1,33 @@
+using System;
+using System.Collections;
+
+public class Stack
+{
+	public static void Main(string[] args)
+	{
+		Stack sk = new Stack();
+		sk.Push("Python");
+		sk.Push("React");
+		sk.Push("Neo4G");
+		sk.Push(32203);
+		sk.Push(null);
+		sk.Push("SQL Server");
+		Console.WriteLine("Number of elements in the stack : " + sk.Count);
+		Console.WriteLine();
+		foreach(var elem in sk) 
+		{
+			Console.WriteLine(elem);
+		}
+		sk.Pop();
+		Console.WriteLine("Number of elements in the stack : " + sk.Count);
+		Console.WriteLine();
+		                 
+		Console.WriteLine("Number of elements in the stack : " + sk.Count);
+		
+		//Removes all the elements in the stack 
+		sk.Clear();
+		Console.WriteLine();
+		Console.WriteLine("Number of elements in the stack after delete : " + sk.Count);
+
+	}
+}
