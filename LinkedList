@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+
+public class LinkedListProgram
+{
+	public static void Main(string[] args)
+	{
+		LinkedList<string> my_list = new LinkedList<string>();
+		my_list.AddLast("Python");
+		my_list.AddLast("Java");
+		my_list.AddLast("C#");
+		my_list.AddLast("C++");
+		my_list.AddLast("JavaScript");
+		
+		foreach(var elem in my_list) 
+		{
+			Console.WriteLine(elem);
+		}
+		  my_list.AddFirst("C");
+		Console.WriteLine("Elements after addfirst");
+		Console.WriteLine();
+		foreach(var elem in my_list) 
+		{
+			Console.WriteLine(elem);
+		}
+		Console.WriteLine();
+		Console.WriteLine("Number of elements in the stack after delete : " + my_list.Count);
+		Console.WriteLine();
+		
+		my_list.Remove("C#");
+        Console.WriteLine("Number of elements in the linkedelist remove C# : " + my_list.Count);
+		Console.WriteLine();
+		my_list.Remove(my_list.First);
+		 Console.WriteLine("Number of elements in the linkedelist after remove : " + my_list.Count);
+		Console.WriteLine();
+		foreach(var elem in my_list) 
+		{
+			Console.WriteLine(elem);
+		}
+		my_list.RemoveFirst();
+		Console.WriteLine();
+		foreach(var elem in my_list) 
+		{
+			Console.WriteLine(elem);
+		}
+		my_list.Clear();
+		Console.WriteLine("Number of elements in the linkedelist after clear() : " + my_list.Count);
+	}
+}
