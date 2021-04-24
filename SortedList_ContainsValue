@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+
+public class SortedListProgram
+{
+	public static void Main(string[] args)
+	{
+		//Create a sortedlist
+		SortedList slist = new SortedList();
+
+		//adding elements to the sortedlist object
+		slist.Add("1", "Chocolates");
+		slist.Add("2", "Coffee");
+		slist.Add("3","Latte");
+		slist.Add("4", "Cappuccino");
+		slist.Add("5","Black Coffee");
+		
+		foreach(DictionaryEntry  dp in slist)
+		{
+			Console.WriteLine(dp.Key + " " + dp.Value);
+		}
+		Console.WriteLine();
+		//Checking if a SortedList object
+        // contains a specific value
+		Console.WriteLine(slist.ContainsValue(null));
+		Console.WriteLine(slist.ContainsValue("Latte"));
+	}
+}
