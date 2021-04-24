@@ -1,0 +1,31 @@
+using System;
+using System.Collections;
+
+public class Queue
+{
+	public static void Main(string[] args)
+	{
+		Queue sk = new Queue();
+		sk.Enqueue("Python");
+		sk.Enqueue("React");
+		sk.Enqueue("Neo4G");
+		sk.Enqueue(32203);
+		sk.Enqueue(null);
+		sk.Enqueue("SQL Server");
+		
+		Console.WriteLine("Number of elements in the queue : " + sk.Count);
+		Console.WriteLine();
+		foreach(var elem in sk) 
+		{
+			Console.WriteLine(elem);
+		}
+		sk.Dequeue();
+		Console.WriteLine("Number of elements in the queue : " + sk.Count);
+		Console.WriteLine();
+		Console.WriteLine("Topmost element of my_queue is: {0}",
+                                               sk.Peek());
+  
+		Console.WriteLine("Number of elements in the stack after delete : " + sk.Count);
+
+	}
+}
